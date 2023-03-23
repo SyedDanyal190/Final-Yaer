@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registor</title>
+    <link rel="stylesheet" href="family-form.css">
+    
+    <link rel="icon" type="image/x-icon" href="images/kara-kamal-logo.jpg">
+
+<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div class="heading">
+     <h1>Family Verification Form</h1>   
+    </div>
+<div class="Main-form">
+<form  onsubmit="return validation()">
+<div class="frt" style="display: flex;flex-direction: row;">
+    <label><h2>Name</h2></label>
+    <input type="text"   class="name" placeholder="Enter your Name" id="name" style="margin-left: 260px;margin-top: 20px;">
+
+    <h2 >Head of the family</h2>
+    <input type="text"  class="head-family" placeholder="Name of Head of Family" id ="Headfamily" style="margin-top: 20px">
+   
+</div>
+    <span id="username" style="margin-left: 380px;color: rgb(0, 255, 47);"></span>
+    <span id="Head" style="margin-left:430px ;color: rgb(0, 255, 47);"></span>
+
+    <br>
+    <div class="frt" style="display: flex;flex-direction: row;">
+    <label ><h2>Father/Husband Name</h2></label>
+    <input type="text"   class="Father-Husband" id="Father" placeholder="Enter  Father/Husband Name" style="margin-top: 10px">
+
+    <label><h2>CNIC Detail</h2></label>
+    <input type="tel"  class="CNIC-Detail" id="CNICDetail" placeholder="Enter your CNIC No." style="margin-top: 10px;margin-left: 150px;width: 230px;">
+     </div>
+
+      <span id="Fathername" style="margin-left: 380px;color: rgb(0, 255, 47);" ></span>
+      <span id="CNICname" style="margin-left:380px;color: rgb(0, 255, 47);"></span>
+
+    <br>
+    <div class="frt" style="display: flex;flex-direction: row;">
+    <label><h2>Phone Number</h2></label>
+    <input type="tel"   class="Phone-No" id="Phone" placeholder="Enter your Phone Number"  style="margin-left: 164px;margin-top: 10px;">
+ 
+   <label for="Present"><h2>Present Address</h2></label>
+     <textarea name="Present" class="Present-Address" id="PresentAddress" cols="30" rows="3" style="margin-left: 110px;"></textarea>
+     </div>
+
+     <span id="Phonename" style="margin-left: 380px;color: rgb(0, 255, 47);"></span>
+     <span id="Presentname" style="margin-left:430px;color: rgb(0, 255, 47);"></span>
+     <br>
+     <div class="frt" style="display: flex;flex-direction: row;">
+    <label for="House"><h2>Detail of House</h2></label>
+     <textarea  name="House" cols="30" rows="3" class="House-Detail" id="DetailHouse" ></textarea>
+ 
+     <label for="City" ><h2>City Name</h2></label>
+    <select name="City" id="City">
+
+        <option value="">Choose City</option>
+        <option value="L">Lahore</option>
+        <option value="I">Islamabad</option>
+        <option value="B">BahawalPur</option>
+        <option value="C"> Chichawatni </option>
+        <option value="F"> Faisalabad  </option>
+        <option value="G"> Gujranwala  </option>
+        <option value="H"> Haroonabad  </option>
+        <option value="M"> Muridkey    </option>
+        <option value="M"> Multan      </option>
+        <option value="O"> Okara       </option>
+        <option value="R"> Rahim Yar Khan</option>
+        <option value="BN"> Bahawalanagar</option>
+    </select>
+</div>
+<span id="Detailname" style="margin-left: 410px;color: rgb(0, 255, 47);"></span>
+<!----
+<span id="CityName" style="margin-left: 380px;color: rgb(0, 255, 47);"></span>
+-->
+    <br>
+<div class="frt" style="display: flex;flex-direction: row;">
+<label ><h2>Total:Income</h2></label>
+<select name="Total-Income" id="Income">
+    <option value="">  Choose Option</option>
+    <option value="1">  1000  </option>
+    <option value="2">  2000  </option>
+    <option value="3">  3000  </option>
+    <option value="4">  4000  </option>
+    <option value="5">  5000  </option>
+    <option value="6">  6000  </option>
+    <option value="7">  7000  </option>
+    <option value="8">  8000  </option>
+    <option value="9">  9000  </option>
+    <option value="10"> 10,000  </option>
+    <option value="11"> 11,000  </option>
+    <option value="12"> 12,000  </option>
+</select>
+
+
+<label><h2>Medicine/School Fee Case</h2></label>
+<select id="Med" >
+    <option value="">Choose Option</option>
+    <option value="M">Medicine</option>
+    <option value="S">School</option>
+</select>
+<!-----
+<span id="IncomeName" style="margin-left: 180px;color: rgb(0, 255, 47);"></span>
+<span id="MedicineName" style="margin-left: 280px;color: rgb(0, 255, 47);"></span>
+--->
+<h2 >CNIC</h2>
+<input type="file" value="File" class="CNIC-file">
+</div>
+<br>
+<div class="frt" style="display: flex;flex-direction: row;">
+    <h2 >Bey Form</h2>
+<input type="file" value="File" class="Bey-file">
+<h2 >Utility Bills</h2>
+<input type="file" value="File" class="Utility-file">
+</div>
+<br>
+<input type="submit"  class="sub" >
+</form>
+</div>
+
+
+<script>
+    function validation(){
+        var user =  document.getElementById("name").value;
+        var head = document.getElementById("Headfamily").value;
+        var father = document.getElementById("Father").value;
+        var cnic = document.getElementById("CNICDetail").value;
+        var tel = document.getElementById("Phone").value;
+        var address = document.getElementById("PresentAddress").value;
+        var house = document.getElementById("DetailHouse").value;
+        /*
+       var cityfamily = document.getElementById("City").value;
+       var totalincome = document.getElementById("Income").value;
+       var medicine = document.getElementById("Med").value;
+*/
+  
+/*----------------------------------User Conditions statements --------------------------- - */
+
+if(user == ""){
+       document.getElementById("username").innerHTML = "** Please fill the username field **";
+       return false;
+    }
+   
+    if(!isNaN(user)){
+        document.getElementById("username").innerHTML = "** Only Characters are allowed **";
+       return false;
+    }
+    if((user.length <= 2)  || (user.length > 15)){
+        document.getElementById("username").innerHTML = "** user length must between 2 and 15 **";
+       return false;
+    } 
+/*----------------------------------Head of Family Conditions statements --------------------------- - */
+if(head == ""){
+    document.getElementById("Head").innerHTML = "**Please fill the Haed name filed **";
+    return false;
+}
+if(!isNaN(head)){
+    document.getElementById("Head").innerHTML ="* Only Characters are allowed *";
+    return false;
+}
+if((head.length <=2)  || (head.length > 15)){
+    document.getElementById("Head").innerHTML = " *User length must between 2 and 15**";
+    return false;
+}
+
+/*----------------------------------Father/Husband Conditions statements--------------------------- - */
+
+
+if(father == ""){
+       document.getElementById("Fathername").innerHTML = "** Please fill the father/Husband name **";
+       return false;
+    }
+    if((father.length <= 2)  || (father.length > 15)){
+        document.getElementById("Fathername").innerHTML = "** user length must between 6 and 20 **";
+       return false;
+    } 
+    if(!isNaN(father)){
+        document.getElementById("Fathername").innerHTML = "** Only Characters are allowed **";
+       return false;
+    }
+
+/*---------------------------------- CNIC Conditions statements--------------------------- - */
+
+
+if(cnic == ""){
+       document.getElementById("CNICname").innerHTML = "** Please Enter the CNIC number **";
+       return false;
+    }
+    if((cnic.length <= 2)  || (cnic.length > 14)){
+        document.getElementById("CNICname").innerHTML = "** user length must between 13 and 14 **";
+       return false;
+    } 
+    if(isNaN(cnic)){
+        document.getElementById("CNICname").innerHTML = "** Only numbers are allowed **";
+       return false;
+    }
+
+/*---------------------------------- Phone Conditions statements--------------------------- - */
+
+if(tel == ""){
+       document.getElementById("Phonename").innerHTML = "** Please Enter the Phone number **";
+       return false;
+    }
+    if((tel.length!=11)){
+        document.getElementById("Phonename").innerHTML = "** Mobile Number must be 11 digits **";
+       return false;
+    } 
+    if(isNaN(tel)){
+        document.getElementById("Phonename").innerHTML = "** Only numbers/digits are allowed **";
+       return false;
+    }
+
+
+/*---------------------------------- Address Conditions statements--------------------------- - */
+
+    if(address == ""){
+       document.getElementById("Presentname").innerHTML = "** Please fill the address **";
+       return false;
+    }
+    if((address.length <= 2)  || (address.length > 15)){
+        document.getElementById("Presentname").innerHTML = "** user length must between 12 and 15 **";
+       return false;
+    } 
+/*---------------------------------- House Conditions statements--------------------------- - */
+
+if(house == ""){
+       document.getElementById("Detailname").innerHTML = "** Please fill the house rent  **";
+       return false;
+    }
+    if((house.length <= 2)  || (house.length > 15)){
+        document.getElementById("Detailname").innerHTML = "** user length must between 12 and 15 **";
+       return false;
+    } 
+/*---------------------------------- CityName Conditions statements--------------------------- -
+   if(cityfamily == ""){
+    document.getElementById("CityName").innerHTML = "** Please fill the choice";
+    return false;
+   }
+
+/*---------------------------------- Income Conditions statements--------------------------- - 
+if(totalincome == ""){
+    document.getElementById("IncomeName").innerHTML = "** Please fill the choice";
+    return false;
+   }
+/*---------------------------------- Med Conditions statements--------------------------- - *
+if(medicine == ""){
+    document.getElementById("MedicineName").innerHTML = "** Please fill the choice";
+    return false;
+   }
+   */
+    }
+
+   
+</script>
+
+
+
+</body>
+
+</html>

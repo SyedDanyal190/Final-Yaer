@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Induction Form</title>
+    <link rel="icon" type="image/x-icon" href="images/kara-kamal-logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="Footer-style.css">
+    <link rel="stylesheet" href="style-form.css">
+  
+   
+</head>
+<body>
+<div class="Top-page">
+    <h1>Induction Form</h1>
+</div>
+<div class="Form-1"  style="height: 570px;">
+<form onsubmit="return validation()">
+    <label><h2>Name</h2></label>
+    <input type="text" class="Name" id="name">
+    <span id="username" style="margin-left: 360px;color: rgb(0, 255, 47);"></span>
+    <br>
+ 
+    <label><h2>CNIC Detail</h2></label>
+    <input type="tel" placeholder="Enter your CNIC" class="CNIC" id="CNIC-Detail">
+    <span id="CNICname" style="margin-left: 360px;color: rgb(0, 255, 47);"></span>
+    <br>
+
+
+    <label><h2>Phone Number</h2></label>
+    <input type="tel" class="phone" id="Phone">
+    <span id="Phonename" style="margin-left: 360px;color: rgb(0, 255, 47);"></span><br>
+    <!----
+    <label><h2>Family Details</h2></label>
+    <textarea cols="40" rows="6" class="Family"></textarea><br>
+    -------->
+    <h2 style="margin-top: 30px;">Enter Your Present Address</h2>
+    <textarea cols="40"  rows="5" id="PresentAddress"></textarea>
+    <span id="Presentname" style="margin-left: 360px;color: rgb(0, 255, 47);"></span>
+    <br> 
+   
+
+    <label><h2>City Name</h2></label>
+    <select class="City">
+          
+        <option value="L"> Lahore      </option>
+        <option value="I"> Islamabad   </option>
+        <option value="B"> BahawalPur  </option>
+        <option value="C"> Chichawatni </option>
+        <option value="F"> Faisalabad  </option>
+        <option value="G"> Gujranwala  </option>
+        <option value="H"> Haroonabad  </option>
+        <option value="M"> Muridkey    </option>
+        <option value="M"> Multan      </option>
+        <option value="O"> Okara       </option>
+        <option value="R"> Rahim Yar Khan</option>
+        <option value="BN"> Bahawalanagar</option>
+    
+      </select><br>
+
+
+ <input type="submit"  class="sub" >
+</form>
+</div>
+
+
+
+<!------------------------------------ Footer   ---------------------------------->
+<section>
+    <div class="Footer">
+    <div class="Footer-left">
+    <img src="images/kara-kamal-logo.jpg"  style="width: 100px;height:100px;position: absolute;left:40px;top: 43px; ">
+    <br>
+    <p style="font-size: 12px;margin-top: 40px;">Donate for After_life</p>
+    <p>
+        KAAR-E-KAMAL  Is a Non-Profitable Organization. 
+        It was started almost 4 years ago and now it is working in 14+ cities of Pakistan 
+        and still growing day by day. Every city has its own donations records and 
+        individual events like Orphanage visits, food drives, Flood Campaigns, Medical camps etc. 
+        Each City has their individual families which must be fed every month.
+    </p>
+    </div>
+    <div class="Footer-middle">
+       <h1>Contact</h1>
+       <br>
+       <p>Address: Head Quater of Kara kamal Welfare Foundation Lahore-Pakistan</p>
+       <br>
+       <p>UAN:111-983-222-323-21</p>
+       <br>
+       <p>Cell: 03043211214</p>
+       <br> 
+       <a href="#" class="fa fa-facebook"></a>
+       <a href="#" class="fa fa-instagram"></a>
+       <a href="#" class="fa fa-linkedin"></a>
+       <a href="#" class="fa fa-twitter"></a>
+       <div class="Button-footer"><a href="Donate.html " target="_blank"><button>Donate</button></a></div>
+    </div>
+    <div class="Footer-right">
+        <h1>Regions</h1>
+        <br>
+      <a href="Bahawalpur.html" > <p>Bahawalpur</p></a>
+        <p>Lahore</p>
+        <p>Islamabad</p>
+        <p>Gujranwala</p>
+        <p>Rahim Yar Khan</p>
+        <p>Faisalabad</p>
+        <p>Bahawalnagar</p>
+        
+        <p>Haroonabad</p>
+        <p>Multan</p>
+        <p>Muridkey</p>
+        <p>Okara</p>
+    </div> 
+    </div>
+    </section>
+    
+    <div class="Footer-bottom">
+    <hr>
+    <p>Copyright &copy; 2022 by Kara Kamal Welfare Organization</p>
+    </div>
+
+<!---------------- JavaScripts  ----------------------->
+<script>
+
+function validation(){
+    var user = document.getElementById("name").value;
+ 
+  
+    
+    var cnic = document.getElementById("CNIC-Detail").value;
+
+    var tel = document.getElementById("Phone").value;
+    var address = document.getElementById("PresentAddress").value;
+ 
+
+
+/*----------------------------------User Conditions statements --------------------------- - */
+
+    if(user == ""){
+       document.getElementById("username").innerHTML = "** Please fill the username field **";
+       return false;
+    }
+   
+    if(!isNaN(user)){
+        document.getElementById("username").innerHTML = "** Only Characters are allowed **";
+       return false;
+    }
+    if((user.length <= 2)  || (user.length > 15)){
+        document.getElementById("username").innerHTML = "** user length must between 2 and 10 **";
+       return false;
+    } 
+   
+
+
+/*---------------------------------- CNIC Conditions statements--------------------------- - */
+
+
+if(cnic == ""){
+       document.getElementById("CNICname").innerHTML = "** Please Enter the CNIC number **";
+       return false;
+    }
+    if((cnic.length <= 2)  || (cnic.length > 16)){
+        document.getElementById("CNICname").innerHTML = "** user length must between 13 and 14 **";
+       return false;
+    } 
+    if(isNaN(cnic)){
+        document.getElementById("CNICname").innerHTML = "** Only numbers are allowed **";
+       return false;
+    }
+/* ------------------------------------ Email Conditions statements ---------------------------  
+
+if(email == ""){
+    document.getElementById("emailname").innerHTML = "** Please fill the Email field **";
+    return false;
+}
+if(email.indexOf('@') <= 0 ){
+    document.getElementById("emailname").innerHTML = "** @ Invalid Position";
+    return false;
+}
+if(email.charAt(email.length-4)!='.') && (email.charAt(email.length-3)!='.'){
+    document.getElementById("emailname").innerHTML = "** Invalid Position";
+    return false;
+}
+*/
+/*---------------------------------- Phone Conditions statements--------------------------- - */
+
+
+if(tel == ""){
+       document.getElementById("Phonename").innerHTML = "** Please Enter the Phone number **";
+       return false;
+    }
+    if((tel.length!=11)){
+        document.getElementById("Phonename").innerHTML = "** Mobile Number must be 11 digits **";
+       return false;
+    } 
+    if(isNaN(tel)){
+        document.getElementById("Phonename").innerHTML = "** Only numbers/digits are allowed **";
+       return false;
+    }
+
+
+/*---------------------------------- Address Conditions statements--------------------------- - */
+
+
+    if(address == ""){
+       document.getElementById("Presentname").innerHTML = "** Please fill the address **";
+       return false;
+    }
+    if((address.length <= 2)  || (address.length > 15)){
+        document.getElementById("Presentname").innerHTML = "** user length must between 12 and 15 **";
+       return false;
+    } 
+
+/*---------------------------------- windows --------------------------- - 
+    
+    window.location.href = "form-2.html";
+        return true;
+   **/     
+}
+
+</script>
+
+
+</body>
+</html>
